@@ -1,0 +1,14 @@
+<Solution>
+  <PropertyGroup Name="MemoryGame" Version="2.3.2.3" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="EasyScene.csd" Type="Scene" />
+        <Image Name="chatonnoar.png" />
+        <Project Name="LogoScene.csd" Type="Scene" />
+        <Project Name="HardScene.csd" Type="Scene" />
+        <Project Name="TitleScene.csd" Type="Scene" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
