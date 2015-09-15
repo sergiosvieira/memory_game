@@ -8,6 +8,21 @@
         <Project Name="LogoScene.csd" Type="Scene" />
         <Project Name="HardScene.csd" Type="Scene" />
         <Project Name="TitleScene.csd" Type="Scene" />
+        <Project Name="TileNode.csd" Type="Node" />
+        <Image Name="tileclicked.png" />
+        <Image Name="tilenormal.png" />
+        <Image Name="question.png" />
+        <Image Name="background.png" />
+        <Image Name="titlebackground.png" />
+        <Image Name="title.png" />
+        <Image Name="easyclicked.png" />
+        <Image Name="easynormal.png" />
+        <Image Name="hardclicked.png" />
+        <Image Name="hardnormal.png" />
+        <Image Name="person.png" />
+        <Project Name="BackNode.csd" Type="Node" />
+        <Image Name="backnormal.png" />
+        <Image Name="backclicked.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>
