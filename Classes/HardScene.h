@@ -16,6 +16,9 @@ class HardScene : public cocos2d::Layer
 public:
     static cocos2d::Scene* createScene();
     virtual bool init();
+	void onEnter();
+	void bindEvents(cocos2d::Node * a_node);
+	void triggerMainAnimation(float a_dt);
     CREATE_FUNC(HardScene);
 };
 

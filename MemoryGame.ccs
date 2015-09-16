@@ -23,6 +23,17 @@
         <Project Name="BackNode.csd" Type="Node" />
         <Image Name="backnormal.png" />
         <Image Name="backclicked.png" />
+        <Image Name="subtitle.png" />
+        <Image Name="01.png" />
+        <Image Name="02.png" />
+        <Image Name="03.png" />
+        <Image Name="04.png" />
+        <Image Name="05.png" />
+        <Image Name="06.png" />
+        <Image Name="07.png" />
+        <Image Name="08.png" />
+        <Image Name="09.png" />
+        <Image Name="10.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>

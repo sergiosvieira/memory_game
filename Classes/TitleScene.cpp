@@ -49,7 +49,7 @@ void TitleScene::bindEvent(cocos2d::Node* a_node)
             easyButton->addClickEventListener([](cocos2d::Ref* a_reference)
             {
                 auto director = Director::getInstance();
-                director->pushScene(TransitionSlideInT::create(1, EasyScene::createScene()));
+                director->replaceScene(TransitionSlideInT::create(1, EasyScene::createScene()));
             });
         }
         cocos2d::ui::Button *hardButton = (cocos2d::ui::Button*)a_node->getChildByName("HardButton");
@@ -58,7 +58,7 @@ void TitleScene::bindEvent(cocos2d::Node* a_node)
             hardButton->addClickEventListener([](cocos2d::Ref* a_reference)
             {
                 auto director = Director::getInstance();
-                director->pushScene(TransitionSlideInT::create(1, HardScene::createScene()));
+                director->replaceScene(TransitionSlideInT::create(1, HardScene::createScene()));
             });
         }
     }

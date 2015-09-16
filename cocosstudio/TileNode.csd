@@ -9,15 +9,16 @@
           <AbstractNodeData Name="Button_1" ActionTag="-1143222466" Tag="6" IconVisible="False" LeftMargin="-128.0000" RightMargin="-128.0000" TopMargin="-128.0000" BottomMargin="-128.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="226" Scale9Height="234" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="256.0000" Y="256.0000" />
             <Children>
-              <AbstractNodeData Name="Image_8" ActionTag="-746241765" Tag="45" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="25.6000" RightMargin="25.6000" TopMargin="25.6000" BottomMargin="25.6000" Scale9Width="905" Scale9Height="905" ctype="ImageViewObjectData">
-                <Size X="204.8000" Y="204.8000" />
+              <AbstractNodeData Name="Sprite_1" ActionTag="-915235556" Tag="347" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-324.4999" RightMargin="-324.5001" TopMargin="-324.5000" BottomMargin="-324.5000" ctype="SpriteObjectData">
+                <Size X="905.0000" Y="905.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="128.0000" Y="128.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <Position X="128.0001" Y="128.0000" />
+                <Scale ScaleX="0.2300" ScaleY="0.2300" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
-                <PreSize X="0.8000" Y="0.8000" />
+                <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="question.png" Plist="" />
+                <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
