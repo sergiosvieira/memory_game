@@ -230,13 +230,13 @@
       </Animation>
       <AnimationList>
         <AnimationInfo Name="main_animation" StartIndex="0" EndIndex="45">
-          <RenderColor A="150" R="253" G="245" B="230" />
+          <RenderColor A="255" R="253" G="245" B="230" />
         </AnimationInfo>
       </AnimationList>
       <ObjectData Name="Scene" Tag="5" ctype="GameNodeObjectData">
         <Size X="1136.0000" Y="640.0000" />
         <Children>
-          <AbstractNodeData Name="background_1" ActionTag="135708044" Tag="67" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" ctype="SpriteObjectData">
+          <AbstractNodeData Name="background" ActionTag="135708044" Tag="67" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" ctype="SpriteObjectData">
             <Size X="1136.0000" Y="640.0000" />
             <AnchorPoint />
             <Position />
@@ -251,7 +251,7 @@
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="222.9939" Y="444.9138" />
-            <Scale ScaleX="0.8000" ScaleY="0.8000" />
+            <Scale ScaleX="0.4000" ScaleY="0.8000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.1963" Y="0.6952" />
             <PreSize X="0.0000" Y="0.0000" />
@@ -261,7 +261,7 @@
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="455.7242" Y="444.9138" />
-            <Scale ScaleX="0.8000" ScaleY="0.8000" />
+            <Scale ScaleX="0.4000" ScaleY="0.8000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4012" Y="0.6952" />
             <PreSize X="0.0000" Y="0.0000" />
@@ -271,7 +271,7 @@
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="688.4556" Y="444.9138" />
-            <Scale ScaleX="0.8000" ScaleY="0.8000" />
+            <Scale ScaleX="0.4000" ScaleY="0.8000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.6060" Y="0.6952" />
             <PreSize X="0.0000" Y="0.0000" />
@@ -281,7 +281,7 @@
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="921.1856" Y="444.9138" />
-            <Scale ScaleX="0.8000" ScaleY="0.8000" />
+            <Scale ScaleX="0.4000" ScaleY="0.8000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8109" Y="0.6952" />
             <PreSize X="0.0000" Y="0.0000" />
@@ -291,7 +291,7 @@
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="222.9939" Y="207.3860" />
-            <Scale ScaleX="0.8000" ScaleY="0.8000" />
+            <Scale ScaleX="0.4000" ScaleY="0.8000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.1963" Y="0.3240" />
             <PreSize X="0.0000" Y="0.0000" />
@@ -301,7 +301,7 @@
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="455.7242" Y="207.3860" />
-            <Scale ScaleX="0.8000" ScaleY="0.8000" />
+            <Scale ScaleX="0.4000" ScaleY="0.8000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4012" Y="0.3240" />
             <PreSize X="0.0000" Y="0.0000" />
@@ -311,7 +311,7 @@
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="688.4556" Y="207.3860" />
-            <Scale ScaleX="0.8000" ScaleY="0.8000" />
+            <Scale ScaleX="0.4000" ScaleY="0.8000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.6060" Y="0.3240" />
             <PreSize X="0.0000" Y="0.0000" />
@@ -321,7 +321,7 @@
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="921.1856" Y="207.3860" />
-            <Scale ScaleX="0.8000" ScaleY="0.8000" />
+            <Scale ScaleX="0.4000" ScaleY="0.8000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.8109" Y="0.3240" />
             <PreSize X="0.0000" Y="0.0000" />

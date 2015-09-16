@@ -39,6 +39,20 @@ bool TitleScene::init()
     return true;
 }
 
+void TitleScene::onEnter()
+{
+	Layer::onEnter();
+	this->scheduleOnce(schedule_selector(TitleScene::triggerMainAnimation), 0.1f);	
+}
+
+void TitleScene::triggerMainAnimation(float a_dt)
+{
+	ActionTimeline* timeLine = CSLoader::createTimeline("TitleScene.csb");
+	this->stopAllActions();
+	this->runAction(timeLine);
+	timeLine->play("subtitle_animation", true);
+}
+
 void TitleScene::bindEvent(cocos2d::Node* a_node)
 {
     if (a_node != nullptr)

@@ -18,6 +18,8 @@ public:
     virtual bool init();
     CREATE_FUNC(TitleScene);
 private:
+	void onEnter();
+	void triggerMainAnimation(float a_dt);
     void bindEvent(cocos2d::Node* a_node);
 };
 

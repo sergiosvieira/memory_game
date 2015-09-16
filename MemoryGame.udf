@@ -2,7 +2,7 @@
   <Properties>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
-        <LastPublishType Value="VS" />
+        <LastPublishType Value="Resource" />
         <IsLastPublish Value="True" />
         <LastRunType Value="Windows" />
       </Value>
@@ -26,18 +26,6 @@
         <KeystoreAliasPassword Value="" />
         <EnableSourceMap Value="False" />
         <EnableHTML5Advanced Value="False" />
-      </Value>
-    </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="BackNode.csd" />
-          <FilePathData Path="EasyScene.csd" />
-          <FilePathData Path="HardScene.csd" />
-          <FilePathData Path="TitleScene.csd" />
-          <FilePathData Path="TileNode.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="TileNode.csd" />
       </Value>
     </Item>
   </Properties>
