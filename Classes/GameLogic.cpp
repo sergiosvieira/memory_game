@@ -5,78 +5,71 @@
 
 using namespace std;
 
-
-GameLogic::GameLogic(int a_tiles, std::vector<std::string> a_images)
+GameLogic::GameLogic(int a_total, Vector a_tiles)
 {
-	m_tiles = a_tiles / 2;
+	m_tiles.resize(a_tiles.size());
+	std::copy(a_tiles.begin(), a_tiles.end(), m_tiles.begin());
+    m_total = a_total;
+    initializing();
+    selectTiles(a_tiles);
+    prepareBoard();
+}
+
+/** Public Methods **/
+int GameLogic::boardSize()
+{
+	return m_total;
+}
+
+bool GameLogic::isValidSelection(int a_selection)
+{
+	return m_status[a_selection] == false;
+}
+
+bool GameLogic::match(int a_firstSelect, int a_secondSelection)
+{
+	return m_board[a_firstSelect] == m_board[a_secondSelection];
+}
+
+void GameLogic::performMatch(int a_firstSelect, int a_secondSelection)
+{
+    m_status[a_firstSelect] = true;
+    m_status[a_secondSelection] = true;
+}
+
+std::string GameLogic::tileValue(int a_selection)
+{
+	return m_tiles[m_board[a_selection]];
+}
+
+/** Protected Methods **/
+void GameLogic::initializing()
+{
+    m_board.resize(m_total);
+    m_status.resize(m_total);
+}
+
+void GameLogic::selectTiles(Vector & a_tiles)
+{
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-	std::shuffle(a_images.begin(), a_images.end(), std::default_random_engine(seed));	
-	for (int i = 0; i < m_tiles; ++i)
-	{
-		m_selectedImage.push_back(a_images.at(i));
-	}
-	int counter = 0;
-	for (int i = 0; i < a_tiles; ++i)
-	{
-		m_positions.push_back(counter);
-		if (i % 2 != 0)
-		{
-			++counter;
-		}
-	}
-	std::shuffle(m_positions.begin(), m_positions.end(), std::default_random_engine(seed));
-	m_matched.reserve(m_positions.size());
-	std::fill(m_matched.begin(), m_matched.end(), false);
+    m_selected_tiles.resize(m_total / 2);
+    std::shuffle(a_tiles.begin(), a_tiles.end(), std::default_random_engine(seed));
+    std::copy(a_tiles.begin(), a_tiles.begin() + m_total / 2, m_selected_tiles.begin());
 }
 
-void GameLogic::select(int a_tileIndex)
+void GameLogic::prepareBoard()
 {
-	if (m_matched[a_tileIndex - 1] == false)
-	{
-		if (m_firstSelection == true)
-		{
-			m_tag = m_positions[a_tileIndex - 1];
-			m_firstSelection = false;
-		}
-	}
-}
-
-std::string GameLogic::spriteName(int a_spriteIndex)
-{
-	std::string result = m_selectedImage[m_positions[a_spriteIndex - 1]];
-	return result;
-}
-
-int GameLogic::selectedTag()
-{
-	return m_tag;
-}
-
-
-bool GameLogic::isFirstSelection()
-{
-	return m_firstSelection;
-}
-
-bool GameLogic::isMatch(int a_tag)
-{
-	bool result = (m_tag == m_positions[a_tag - 1]);
-	if (result == true)
-	{
-		int tag = m_positions[a_tag - 1];
-		for (int i = 0; i < m_positions.size(); ++i)
-		{
-			if (m_positions[i] == tag)
-			{
-				m_matched[i] = true;
-			}
-		}
-	}
-	return result;
-}
-
-void GameLogic::reset()
-{
-	m_firstSelection = true;
-	m_tag = -1;
+    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    int counter = -1;
+    int value = 0;
+    std::generate(m_board.begin(), m_board.end(), [&counter, &value]()
+    {
+        if (counter % 2 == 1)
+        {
+            ++value;
+        }
+        ++counter;
+        return value;
+    });
+    std::shuffle(m_board.begin(), m_board.end(), std::default_random_engine(seed));
 }

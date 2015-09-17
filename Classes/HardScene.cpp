@@ -108,29 +108,6 @@ void HardScene::bindTiles(cocos2d::Node* a_node)
 			button->setTag(counter++);
 			button->addClickEventListener([=](cocos2d::Ref* a_reference) 
 			{
-				cocos2d::Sprite* sprite = static_cast<cocos2d::Sprite*>(button->getChildByName("Sprite_1"));
-				if (m_gameLogic->isFirstSelection() == true)
-				{					
-					std::string textureName = "res/" + m_gameLogic->spriteName(button->getTag()) + ".png";
-					sprite->setTexture(CCTextureCache::sharedTextureCache()->addImage(textureName));
-					m_lastSprite = sprite;
-					m_gameLogic->select(button->getTag());
-				}
-				else
-				{
-					if (m_gameLogic->isMatch(button->getTag()) == false)
-					{
-						m_lastSprite->setTexture(CCTextureCache::sharedTextureCache()->addImage("res/question.png"));
-						sprite->setTexture(CCTextureCache::sharedTextureCache()->addImage("res/question.png"));
-					}
-					else
-					{
-						std::string textureName = "res/" + m_gameLogic->spriteName(button->getTag()) + ".png";
-						sprite->setTexture(CCTextureCache::sharedTextureCache()->addImage(textureName));
-					}
-					m_gameLogic->reset();
-					m_lastSprite = nullptr;
-				}
 			});
 		}
 	}

@@ -6,21 +6,23 @@
 
 class GameLogic
 {
+    typedef std::vector<std::string> Vector;
 public:
-	GameLogic(int a_tiles, std::vector<std::string> a_images);
-	void select(int a_tileIndex);
-	std::string spriteName(int a_spriteIndex);
-	int selectedTag();
-	bool isFirstSelection();
-	bool isMatch(int a_tag);
-	void reset();
+	GameLogic(int a_total, Vector a_tiles);
+	int boardSize();
+	bool isValidSelection(int a_selection);
+	bool match(int a_firstSelect, int a_secondSelection);
+	void performMatch(int a_firstSelect, int a_secondSelection);
+	std::string tileValue(int a_selection);
 protected:
-	int m_tiles = 0;
-	int m_tag = -1;
-	bool m_firstSelection = true;
-	std::vector<std::string> m_selectedImage;
-	std::vector<int> m_positions;
-	std::vector<bool> m_matched;
+    int m_total;
+    std::vector<int> m_board;
+    std::vector<bool> m_status;
+	Vector m_tiles;
+    Vector m_selected_tiles;
+	void initializing();
+	void selectTiles(Vector& a_tiles);
+	void prepareBoard();
 };
 
 #endif /** __GAME_LOGIC__ **/

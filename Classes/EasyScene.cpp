@@ -8,7 +8,6 @@
 
 #include "EasyScene.h"
 #include "cocostudio/CocoStudio.h"
-#include "ui/CocosGUI.h"
 #include "TitleScene.h"
 #include "GameLogic.h"
 
@@ -54,7 +53,7 @@ bool EasyScene::init()
     {
         return false;
     }
-	m_gameLogic = new GameLogic(6, kImages);
+	m_game = new GameLogic(6, kImages);
     auto rootNode = CSLoader::createNode("EasyScene.csb");
 	auto backButtonNode = rootNode->getChildByName("BackButtonNode");
 	bindEvents(backButtonNode);
@@ -66,9 +65,9 @@ bool EasyScene::init()
 
 void EasyScene::onExit()
 {
-	if (m_gameLogic != nullptr)
+	if (m_game != nullptr)
 	{
-		delete m_gameLogic;
+		delete m_game;
 	}
 }
 
@@ -106,32 +105,52 @@ void EasyScene::bindTiles(cocos2d::Node* a_node)
 			button->setTag(counter++);
 			button->addClickEventListener([=](cocos2d::Ref* a_reference) 
 			{
-				cocos2d::Sprite* sprite = static_cast<cocos2d::Sprite*>(button->getChildByName("Sprite_1"));
-				if (m_gameLogic->isFirstSelection() == true)
-				{					
-					std::string textureName = "res/" + m_gameLogic->spriteName(button->getTag()) + ".png";
-					sprite->setTexture(CCTextureCache::sharedTextureCache()->addImage(textureName));
-					m_lastSprite = sprite;
-					m_gameLogic->select(button->getTag());
-				}
-				else
-				{
-					if (m_gameLogic->isMatch(button->getTag()) == false)
+				if (m_locked == false)
+				{			
+					if (m_firstSelected == nullptr)
 					{
-						m_lastSprite->setTexture(CCTextureCache::sharedTextureCache()->addImage("res/question.png"));
-						sprite->setTexture(CCTextureCache::sharedTextureCache()->addImage("res/question.png"));
+						if (m_game->isValidSelection(button->getTag() - 1) == true)
+						{
+							m_firstSelected = button;
+							cocos2d::Sprite* sprite = static_cast<cocos2d::Sprite*>(m_firstSelected->getChildByName("Sprite_1"));
+							sprite->setTexture(CCTextureCache::sharedTextureCache()->addImage("res/" + m_game->tileValue(button->getTag() - 1) + ".png"));
+						}
 					}
-					else
+					else if (m_secondSelected == nullptr)
 					{
-						std::string textureName = "res/" + m_gameLogic->spriteName(button->getTag()) + ".png";
-						sprite->setTexture(CCTextureCache::sharedTextureCache()->addImage(textureName));
+						if (m_game->isValidSelection(button->getTag() - 1) == true
+							&& m_game->isValidSelection(m_firstSelected->getTag() - 1) == true
+							&& m_firstSelected->getTag() != button->getTag())
+						{
+							m_secondSelected = button;
+							cocos2d::Sprite* sprite = static_cast<cocos2d::Sprite*>(m_secondSelected->getChildByName("Sprite_1"));
+							sprite->setTexture(CCTextureCache::sharedTextureCache()->addImage("res/" + m_game->tileValue(button->getTag() - 1) + ".png"));
+							m_locked = true;
+							int first = m_firstSelected->getTag() - 1;
+							int second = m_secondSelected->getTag() - 1;
+							if (m_game->match(first, second) == true)
+							{
+								m_game->performMatch(first, second);
+								m_firstSelected = nullptr;
+								m_secondSelected = nullptr;
+								m_locked = false;
+							}
+							else
+							{
+								this->scheduleOnce(schedule_selector(EasyScene::triggerResetTiles), 0.5f);
+							}
+						}
 					}
-					m_gameLogic->reset();
-					m_lastSprite = nullptr;
 				}
 			});
 		}
 	}
+}
+
+void EasyScene::triggerResetTiles(float a_dt)
+{
+	this->scheduleOnce(schedule_selector(EasyScene::triggerAnimateFirstTile), 0.2f);
+	this->scheduleOnce(schedule_selector(EasyScene::triggerAnimateSecondTile), 0.25f);
 }
 
 void EasyScene::triggerMainAnimation(float a_dt)
@@ -139,5 +158,28 @@ void EasyScene::triggerMainAnimation(float a_dt)
 	ActionTimeline* timeLine = CSLoader::createTimeline("EasyScene.csb");
 	this->stopAllActions();
 	this->runAction(timeLine);
-	timeLine->play("main_animation", false);
+	timeLine->play("main_animation", false);	
+}
+
+void EasyScene::triggerAnimateFirstTile(float a_dt)
+{
+	ActionTimeline* timeLine = CSLoader::createTimeline("TileNode.csb");	
+	m_firstSelected->stopAllActions();
+	m_firstSelected->runAction(timeLine);
+	timeLine->play("tile_animation", false);
+	cocos2d::Sprite* secondSprite = static_cast<cocos2d::Sprite*>(m_firstSelected->getChildByName("Sprite_1"));						
+	secondSprite->setTexture(CCTextureCache::sharedTextureCache()->addImage("res/question.png"));	
+	m_firstSelected = nullptr;
+}
+
+void EasyScene::triggerAnimateSecondTile(float a_dt)
+{
+	ActionTimeline* timeLine = CSLoader::createTimeline("TileNode.csb");	
+	m_secondSelected->stopAllActions();
+	m_secondSelected->runAction(timeLine);
+	timeLine->play("tile_animation", false);
+	cocos2d::Sprite* secondSprite = static_cast<cocos2d::Sprite*>(m_secondSelected->getChildByName("Sprite_1"));						
+	secondSprite->setTexture(CCTextureCache::sharedTextureCache()->addImage("res/question.png"));	
+	m_secondSelected = nullptr;
+	m_locked = false;
 }

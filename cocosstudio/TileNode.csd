@@ -2,7 +2,46 @@
   <PropertyGroup Type="Node" Name="TileNode" ID="57fcec19-e0c3-4c28-9fa4-ff2152155298" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="0" Speed="1.0000" />
+      <Animation Duration="10" Speed="1.6667" ActivedAnimationName="tile_animation">
+        <Timeline ActionTag="-1143222466" Property="Position">
+          <PointFrame FrameIndex="0" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </PointFrame>
+          <PointFrame FrameIndex="5" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </PointFrame>
+          <PointFrame FrameIndex="10" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </PointFrame>
+        </Timeline>
+        <Timeline ActionTag="-1143222466" Property="Scale">
+          <ScaleFrame FrameIndex="0" X="1.0000" Y="1.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="5" X="0.1500" Y="1.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="10" X="1.0000" Y="1.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+        <Timeline ActionTag="-1143222466" Property="RotationSkew">
+          <ScaleFrame FrameIndex="0" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="5" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+          <ScaleFrame FrameIndex="10" X="0.0000" Y="0.0000">
+            <EasingData Type="0" />
+          </ScaleFrame>
+        </Timeline>
+      </Animation>
+      <AnimationList>
+        <AnimationInfo Name="tile_animation" StartIndex="0" EndIndex="10">
+          <RenderColor A="150" R="0" G="255" B="0" />
+        </AnimationInfo>
+      </AnimationList>
       <ObjectData Name="Node" Tag="5" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
@@ -12,7 +51,7 @@
               <AbstractNodeData Name="Sprite_1" ActionTag="-915235556" Tag="347" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-324.4999" RightMargin="-324.5001" TopMargin="-324.5000" BottomMargin="-324.5000" ctype="SpriteObjectData">
                 <Size X="905.0000" Y="905.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="128.0001" Y="128.0000" />
+                <Position X="128.0000" Y="128.0000" />
                 <Scale ScaleX="0.2300" ScaleY="0.2300" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
@@ -23,7 +62,7 @@
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <Scale ScaleX="0.6600" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
