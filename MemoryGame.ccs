@@ -15,12 +15,7 @@
         <Image Name="background.png" />
         <Image Name="titlebackground.png" />
         <Image Name="title.png" />
-        <Image Name="easyclicked.png" />
-        <Image Name="easynormal.png" />
-        <Image Name="hardclicked.png" />
-        <Image Name="hardnormal.png" />
         <Image Name="person.png" />
-        <Project Name="BackNode.csd" Type="Node" />
         <Image Name="backnormal.png" />
         <Image Name="backclicked.png" />
         <Image Name="subtitle.png" />
@@ -34,6 +29,14 @@
         <Image Name="08.png" />
         <Image Name="09.png" />
         <Image Name="10.png" />
+        <Image Name="easyclicked.png" />
+        <Image Name="easynormal.png" />
+        <Image Name="hardclicked.png" />
+        <Image Name="hardnormal.png" />
+        <Project Name="RefreshNode.csd" Type="Node" />
+        <Image Name="refreshclicked.png" />
+        <Image Name="refreshnormal.png" />
+        <Project Name="BackNode.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>

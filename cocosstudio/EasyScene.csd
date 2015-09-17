@@ -174,7 +174,7 @@
       </Animation>
       <AnimationList>
         <AnimationInfo Name="main_animation" StartIndex="0" EndIndex="45">
-          <RenderColor A="150" R="240" G="248" B="255" />
+          <RenderColor A="255" R="240" G="248" B="255" />
         </AnimationInfo>
       </AnimationList>
       <ObjectData Name="Scene" ctype="GameNodeObjectData">
@@ -183,7 +183,7 @@
           <AbstractNodeData Name="background" ActionTag="647829735" Tag="66" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" ctype="SpriteObjectData">
             <Size X="1136.0000" Y="640.0000" />
             <Children>
-              <AbstractNodeData Name="tile_node_1" ActionTag="896774391" Tag="7" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="263.8717" RightMargin="872.1283" TopMargin="168.3238" BottomMargin="471.6762" InnerActionSpeed="0.2500" ctype="ProjectNodeObjectData">
+              <AbstractNodeData Name="tile_node_1" ActionTag="896774391" Tag="7" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="263.8717" RightMargin="872.1283" TopMargin="168.3238" BottomMargin="471.6762" InnerActionSpeed="1.6667" ctype="ProjectNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <AnchorPoint />
                 <Position X="263.8717" Y="471.6762" />
@@ -193,7 +193,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="TileNode.csd" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tile_node_2" ActionTag="-1812059772" Tag="10" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="566.3622" RightMargin="569.6378" TopMargin="168.3238" BottomMargin="471.6762" InnerActionSpeed="0.2500" ctype="ProjectNodeObjectData">
+              <AbstractNodeData Name="tile_node_2" ActionTag="-1812059772" Tag="10" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="566.3622" RightMargin="569.6378" TopMargin="168.3238" BottomMargin="471.6762" InnerActionSpeed="1.6667" ctype="ProjectNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <AnchorPoint />
                 <Position X="566.3622" Y="471.6762" />
@@ -203,7 +203,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="TileNode.csd" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tile_node_3" ActionTag="124045068" Tag="13" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="868.8560" RightMargin="267.1440" TopMargin="168.3238" BottomMargin="471.6762" InnerActionSpeed="0.2500" ctype="ProjectNodeObjectData">
+              <AbstractNodeData Name="tile_node_3" ActionTag="124045068" Tag="13" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="868.8560" RightMargin="267.1440" TopMargin="168.3238" BottomMargin="471.6762" InnerActionSpeed="1.6667" ctype="ProjectNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <AnchorPoint />
                 <Position X="868.8560" Y="471.6762" />
@@ -213,7 +213,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="TileNode.csd" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tile_node_4" ActionTag="791087819" Tag="16" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="263.8717" RightMargin="872.1283" TopMargin="473.4796" BottomMargin="166.5204" InnerActionSpeed="0.2500" ctype="ProjectNodeObjectData">
+              <AbstractNodeData Name="tile_node_4" ActionTag="791087819" Tag="16" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="263.8717" RightMargin="872.1283" TopMargin="473.4796" BottomMargin="166.5204" InnerActionSpeed="1.6667" ctype="ProjectNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <AnchorPoint />
                 <Position X="263.8717" Y="166.5204" />
@@ -223,7 +223,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="TileNode.csd" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tile_node_5" ActionTag="-1178660043" Tag="19" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="566.3622" RightMargin="569.6378" TopMargin="473.4796" BottomMargin="166.5204" InnerActionSpeed="0.2500" ctype="ProjectNodeObjectData">
+              <AbstractNodeData Name="tile_node_5" ActionTag="-1178660043" Tag="19" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="566.3622" RightMargin="569.6378" TopMargin="473.4796" BottomMargin="166.5204" InnerActionSpeed="1.6667" ctype="ProjectNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <AnchorPoint />
                 <Position X="566.3622" Y="166.5204" />
@@ -233,7 +233,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="TileNode.csd" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tile_node_6" ActionTag="615906154" Tag="22" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="868.8560" RightMargin="267.1440" TopMargin="473.4796" BottomMargin="166.5204" InnerActionSpeed="0.2500" ctype="ProjectNodeObjectData">
+              <AbstractNodeData Name="tile_node_6" ActionTag="615906154" Tag="22" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="868.8560" RightMargin="267.1440" TopMargin="473.4796" BottomMargin="166.5204" InnerActionSpeed="1.6667" ctype="ProjectNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <AnchorPoint />
                 <Position X="868.8560" Y="166.5204" />
@@ -253,13 +253,23 @@
             <FileData Type="Normal" Path="background.png" Plist="" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="BackButtonNode" ActionTag="481442692" Tag="136" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="68.3872" RightMargin="1067.6128" TopMargin="584.3840" BottomMargin="55.6160" InnerActionSpeed="0.2500" ctype="ProjectNodeObjectData">
+          <AbstractNodeData Name="RefreshButton" ActionTag="-1500586120" Tag="162" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="69.7442" RightMargin="1066.2557" TopMargin="71.0095" BottomMargin="568.9905" InnerActionSpeed="1.0000" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
-            <Position X="68.3872" Y="55.6160" />
-            <Scale ScaleX="1.6800" ScaleY="1.6800" />
+            <Position X="69.7442" Y="568.9905" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0602" Y="0.0869" />
+            <PrePosition X="0.0614" Y="0.8890" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Normal" Path="RefreshNode.csd" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="BackButton" ActionTag="1515235739" Tag="171" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="68.3427" RightMargin="1067.6572" TopMargin="579.6041" BottomMargin="60.3959" InnerActionSpeed="1.0000" ctype="ProjectNodeObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <AnchorPoint />
+            <Position X="68.3427" Y="60.3959" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.0602" Y="0.0944" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="BackNode.csd" Plist="" />
           </AbstractNodeData>

@@ -32,7 +32,7 @@ private:
 	GameLogic* m_game = nullptr;
 	void onEnter();
 	void onExit();
-	void bindEvents(cocos2d::Node* a_node);
+	void bindEvents(cocos2d::Node * a_backNode, cocos2d::Node * a_refreshNode);
 	void bindTiles(cocos2d::Node * a_node);
 	void triggerResetTiles(float a_dt);
 	void triggerMainAnimation(float a_dt);

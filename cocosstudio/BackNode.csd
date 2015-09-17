@@ -1,13 +1,13 @@
 <GameProjectFile>
-  <PropertyGroup Type="Node" Name="Node" ID="7a57f008-0826-403c-8d41-55d77ebd97c9" Version="2.3.2.3" />
+  <PropertyGroup Type="Node" Name="BackNode" ID="9ddf313e-7406-4a6c-a27f-91a14dce2812" Version="2.3.2.3" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
-      <ObjectData Name="Node" Tag="134" ctype="GameNodeObjectData">
+      <ObjectData Name="Node" Tag="167" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
-          <AbstractNodeData Name="Button_1" ActionTag="-787770313" Tag="135" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-29.0000" RightMargin="-29.0000" TopMargin="-28.5000" BottomMargin="-28.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="28" Scale9Height="35" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="58.0000" Y="57.0000" />
+          <AbstractNodeData Name="Button_1" ActionTag="-1592152854" Tag="168" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="-64.0000" RightMargin="-64.0000" TopMargin="-64.0000" BottomMargin="-64.0000" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="98" Scale9Height="106" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="128.0000" Y="128.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />

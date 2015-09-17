@@ -55,8 +55,9 @@ bool EasyScene::init()
     }
 	m_game = new GameLogic(6, kImages);
     auto rootNode = CSLoader::createNode("EasyScene.csb");
-	auto backButtonNode = rootNode->getChildByName("BackButtonNode");
-	bindEvents(backButtonNode);
+	auto backButtonNode = rootNode->getChildByName("BackButton");
+	auto refreshButtonNode = rootNode->getChildByName("RefreshButton");
+	bindEvents(backButtonNode, refreshButtonNode);	
 	auto background = rootNode->getChildByName("background");
 	bindTiles(background);
     addChild(rootNode);
@@ -77,17 +78,29 @@ void EasyScene::onEnter()
 	this->scheduleOnce(schedule_selector(EasyScene::triggerMainAnimation), 0.1f);	
 }
 
-void EasyScene::bindEvents(cocos2d::Node* a_node)
+void EasyScene::bindEvents(cocos2d::Node* a_backNode, cocos2d::Node* a_refreshNode)
 {
-	if (a_node != nullptr)
+	if (a_backNode != nullptr)
 	{
-		cocos2d::ui::Button *backButton = (cocos2d::ui::Button*)a_node->getChildByName("Button_1");
-		if (backButton != nullptr)
+		cocos2d::ui::Button *button = (cocos2d::ui::Button*)a_backNode->getChildByName("Button_1");
+		if (button != nullptr)
 		{
-			backButton->addClickEventListener([](cocos2d::Ref* a_reference)
+			button->addClickEventListener([](cocos2d::Ref* a_reference)
 			{
 				auto director = Director::getInstance();
-				director->pushScene(TransitionSlideInT::create(1, TitleScene::createScene()));
+				director->pushScene(TransitionSlideInT::create(0.5f, TitleScene::createScene()));
+			});
+		}
+	}
+	if (a_refreshNode != nullptr)
+	{
+		cocos2d::ui::Button *button = (cocos2d::ui::Button*)a_refreshNode->getChildByName("Button_1");
+		if (button != nullptr)
+		{
+			button->addClickEventListener([](cocos2d::Ref* a_reference)
+			{
+				auto director = Director::getInstance();
+				director->pushScene(TransitionSlideInT::create(0.5f, EasyScene::createScene()));
 			});
 		}
 	}
